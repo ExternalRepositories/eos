@@ -85,13 +85,13 @@ jobs:
             image: eoshep/build-essentials:${{ matrix.cfg.os }}
         steps:
             - name: Download configured source as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-source-${{ matrix.cfg.os }}-${{ matrix.cfg.cxx }}-${{ github.sha }}
                 path: _src
 
             - name: Download build as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-build-${{ matrix.cfg.os }}-${{ matrix.cfg.cxx }}-${{ github.sha }}
                 path: _build
@@ -134,13 +134,13 @@ jobs:
             image: eoshep/build-essentials:${{ matrix.cfg.os }}
         steps:
             - name: Download configured source as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-source-${{ matrix.cfg.os }}-${{ matrix.cfg.cxx }}-${{ github.sha }}
                 path: _src
 
             - name: Download build as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-build-${{ matrix.cfg.os }}-${{ matrix.cfg.cxx }}-${{ github.sha }}
                 path: _build
@@ -166,13 +166,13 @@ jobs:
             image: eoshep/build-essentials:${{ matrix.cfg.os }}
         steps:
             - name: Download configured source as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-source-${{ matrix.cfg.os }}-${{ matrix.cfg.cxx }}-${{ github.sha }}
                 path: _src
 
             - name: Download build as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-build-${{ matrix.cfg.os }}-${{ matrix.cfg.cxx }}-${{ github.sha }}
                 path: _build
@@ -200,13 +200,13 @@ jobs:
             image: eoshep/build-essentials:${{ matrix.cfg.os }}
         steps:
             - name: Download configured source as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-source-${{ matrix.cfg.os }}-${{ matrix.cfg.cxx }}-${{ github.sha }}
                 path: _src
 
             - name: Download build as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-build-${{ matrix.cfg.os }}-${{ matrix.cfg.cxx }}-${{ github.sha }}
                 path: _build
@@ -246,7 +246,7 @@ jobs:
         runs-on: ubuntu-18.04
         steps:
             - name: Download configured source as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-source-${{ matrix.cfg.os }}-${{ matrix.cfg.cxx }}-${{ github.sha }}
                 path: _src
@@ -260,7 +260,7 @@ jobs:
                 git clone -o gh "https://eos:${GITHUB_ACCESS_TOKEN}@github.com/eos/doc" _build/doc/html
 
             - name: Download documentation as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-doc-${{ github.sha }}
                 path: _build/doc/html

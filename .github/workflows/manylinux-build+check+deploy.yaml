@@ -90,13 +90,13 @@ jobs:
             image: eoshep/build-essentials:manylinux2014-${{ matrix.cfg.pysuffix }}
         steps:
             - name: Download configured source as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-source-manylinux2014-${{ matrix.cfg.pysuffix }}-g++-${{ github.sha }}
                 path: _src
 
             - name: Download build as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-build-manylinux2014-${{ matrix.cfg.pysuffix }}-g++-${{ github.sha }}
                 path: _build
@@ -129,13 +129,13 @@ jobs:
             image: eoshep/build-essentials:manylinux2014-${{ matrix.cfg.pysuffix }}
         steps:
             - name: Download configured source as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-source-manylinux2014-${{ matrix.cfg.pysuffix }}-g++-${{ github.sha }}
                 path: _src
 
             - name: Download build as artifact
-              uses: actions/download-artifact@v1
+              uses: actions/download-artifact@v4.1.7
               with:
                 name: eos-build-manylinux2014-${{ matrix.cfg.pysuffix }}-g++-${{ github.sha }}
                 path: _build
